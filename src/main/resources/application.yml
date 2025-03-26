@@ -1,0 +1,16 @@
+spring:
+  config:
+    import: "optional:classpath:application-secret.yml"
+  application:
+    name: vemo
+  datasource:
+    url: jdbc:mysql://localhost:3306/vemo
+    username: ${db.username}
+    password: ${db.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
